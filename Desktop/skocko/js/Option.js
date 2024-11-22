@@ -1,0 +1,19 @@
+export default class SlagalicaOption {
+    constructor(value, divElement, updateUserCombination) {
+        this.updateUserCombination = updateUserCombination;
+        this.value = value;
+        this.divElement = divElement;
+        this.divElement.addEventListener("click", () => this.click());
+        this.updateUserCombination = updateUserCombination;
+    }
+    click() {
+        let value = this.value;
+        let image = this.divElement.querySelector("img");
+        if (image) {
+            this.updateUserCombination(value, image);
+        }
+    }
+    removeEventClick() {
+        this.divElement.removeEventListener("click", this.click);
+    }
+}

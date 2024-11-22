@@ -1,0 +1,1 @@
+export type GameElements = "skocko" |"karo" |"tref" |"pik" |"srce" |"zvezda";
